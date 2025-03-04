@@ -1,0 +1,7 @@
+[commit]
+	template = /home/tob/.commit_template
+[user]
+	email = niimicomputergraphics@gmail.com
+	name = ToB213
+[core]
+	editor = vim
