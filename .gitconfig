@@ -1,5 +1,5 @@
 [commit]
-	template = /home/tob/.commit_template
+	template = ~/.commit_template
 [user]
 	email = niimicomputergraphics@gmail.com
 	name = ToB213
