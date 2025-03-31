@@ -4,4 +4,4 @@
 	email = niimicomputergraphics@gmail.com
 	name = ToB213
 [core]
-	editor = vim
+	editor = nvim
