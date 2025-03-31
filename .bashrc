@@ -119,4 +119,7 @@ fi
 alias vim=$HOME/.local/bin/nvim
 
 # start docker
-sudo service docker start
+# sudo service docker start
+
+fastfetch
+
