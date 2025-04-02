@@ -117,9 +117,10 @@ if ! shopt -oq posix; then
 fi
 
 alias vim=$HOME/.local/bin/nvim
-
+alias vi=$HOME/.local/bin/nvim
 # start docker
 # sudo service docker start
 
 fastfetch
 
+alias memo='nvim ~/hoge.md'
