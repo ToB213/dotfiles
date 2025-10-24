@@ -1,0 +1,7 @@
+[user]
+	name = tob
+	email = niimicomputergraphics@gmail.com
+[commit]
+	template = /Users/tob/.gitcommit
+[init]
+	defaultBranch = main
