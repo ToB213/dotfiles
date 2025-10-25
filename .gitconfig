@@ -3,5 +3,6 @@
 	email = niimicomputergraphics@gmail.com
 [commit]
 	template = /Users/tob/.gitcommit
+	template = /Users/ya/.gitcommit
 [init]
 	defaultBranch = main
