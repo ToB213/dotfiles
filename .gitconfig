@@ -1,8 +1,8 @@
 [user]
-	name = tob
-	email = niimicomputergraphics@gmail.com
+    name = tob
+    email = niimicomputergraphics@gmail.com
 [commit]
-	template = /Users/tob/.gitcommit
-	template = /Users/ya/.gitcommit
+    template = ~/.gitcommit
 [init]
-	defaultBranch = main
+    defaultBranch = main
+
