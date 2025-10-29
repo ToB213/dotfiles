@@ -8,6 +8,6 @@ ln -sfv "${DOTFILES_DIR}/.tmux.conf" "${HOME}/.tmux.conf"
 ln -sfv "${DOTFILES_DIR}/.zshrc" "${HOME}/.zshrc"
 
 mkdir -p "${HOME}/.config"
-ln -sfv "${DOTFILES_DIR}/nvim" "${HOME}/.config/nvim"
+ln -sfv "${DOTFILES_DIR}/nvim" "${HOME}/.config/"
 
 echo "Ok"
