@@ -5,4 +5,5 @@
     template = ~/.gitcommit
 [init]
     defaultBranch = main
-
+[core]
+	editor = vim
