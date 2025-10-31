@@ -105,4 +105,5 @@ source $ZSH/oh-my-zsh.sh
 export PATH="/usr/local/opt/openjdk@17/bin:$PATH"
 
 alias vim="nvim"
+alias c="clear"
 fastfetch
