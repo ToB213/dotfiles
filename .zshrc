@@ -106,3 +106,7 @@ export PATH="/usr/local/opt/openjdk@17/bin:$PATH"
 alias vim="nvim"
 alias c="clear"
 fastfetch --logo ~/dotfiles/ascii.txt
+
+if [ -f ~/.bashrc ]; then
+  source ~/.bashrc
+fi
