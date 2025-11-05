@@ -11,4 +11,4 @@ ln -sfv "${DOTFILES_DIR}/.bashrc" "${HOME}/.bashrc"
 mkdir -p "${HOME}/.config"
 ln -sfv "${DOTFILES_DIR}/nvim" "${HOME}/.config/"
 
-echo "Ok"
+echo "Dotfiles have been symlinked."
