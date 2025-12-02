@@ -1,0 +1,18 @@
+# 共通エイリアス
+alias vim="nvim"
+alias c="clear"
+alias ll="ls -alh"
+alias gs="git status"
+
+# エディタ
+export EDITOR=nvim
+
+# pyenv
+export PYENV_ROOT="$HOME/.pyenv"
+export PATH="$PYENV_ROOT/bin:$PATH"
+if command -v pyenv &>/dev/null; then
+  eval "$(pyenv init -)"
+fi
+
+# Rust
+[ -f "$HOME/.cargo/env" ] && source "$HOME/.cargo/env"
