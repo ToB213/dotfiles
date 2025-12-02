@@ -19,3 +19,6 @@ fi
 
 # Java
 export PATH="/usr/local/opt/openjdk@17/bin:$PATH"
+
+# fastfetch
+fastfetch --logo ~/dotfiles/ascii.txt
