@@ -16,3 +16,6 @@ fi
 
 # Rust
 [ -f "$HOME/.cargo/env" ] && source "$HOME/.cargo/env"
+
+# Java
+export PATH="/usr/local/opt/openjdk@17/bin:$PATH"

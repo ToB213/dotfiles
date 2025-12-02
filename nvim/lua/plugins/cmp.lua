@@ -48,6 +48,10 @@ return {
                         end
                     end, { "i", "s" }),
                 }),
+		performance = {
+			debounce = 300, 
+			throttle = 60, 
+		},
                 sources = cmp.config.sources({
 		    { name = "copilot" },
                     { name = "nvim_lsp" },

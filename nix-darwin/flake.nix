@@ -50,7 +50,8 @@
         
         # Rust開発
         rust-analyzer
-
+        
+	# その他
 	openldap
 	perl
 	tree

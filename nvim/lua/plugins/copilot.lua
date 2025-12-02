@@ -10,6 +10,10 @@ return {
             require("copilot").setup({
                 suggestion = { enabled = false },
                 panel = { enabled = false },
+
+		filetypes = {
+			["*"] = false,
+		},
             })
             require("copilot_cmp").setup()
         end,

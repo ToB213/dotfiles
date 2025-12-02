@@ -1,1 +1,5 @@
-/Users/ya/dotfiles/.bashrc
+# 共通設定を読み込み
+source ~/dotfiles/shell/profile
+
+# fastfetch
+fastfetch --logo ~/dotfiles/ascii.txt
