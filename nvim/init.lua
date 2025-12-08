@@ -1,8 +1,8 @@
-vim.g.mapleader = ' '
-vim.g.maplocalleader = ' '
+vim.g.mapleader = " "
+vim.g.maplocalleader = " "
 vim.opt.number = true
 vim.opt.clipboard = "unnamedplus"
-vim.opt.mouse = 'a'
+vim.opt.mouse = "a"
 
 vim.opt.termguicolors = true
 require("config.lazy")
@@ -13,31 +13,36 @@ vim.g.loaded_netrwPlugin = 1
 require("nvim-tree").setup()
 
 require("nvim-tree").setup({
-  sort = {
-    sorter = "case_sensitive",
-  },
-  view = {
-    width = 30,
-  },
-  renderer = {
-    group_empty = true,
-  },
-  filters = {
-    dotfiles = true,
-  },
+	sort = {
+		sorter = "case_sensitive",
+	},
+	view = {
+		width = 30,
+	},
+	renderer = {
+		group_empty = true,
+	},
+	filters = {
+		dotfiles = true,
+	},
 })
 
 local copilot_on = false
 
-vim.keymap.set('n', '<Leader>cp', function()
-  local command = require("copilot.command")
-  if copilot_on then
-    command.disable()
-    print("Copilot OFF")
-    copilot_on = false
-  else
-    command.enable()
-    print("Copilot ON")
-    copilot_on = true
-  end
+vim.keymap.set("n", "<Leader>cp", function()
+	local command = require("copilot.command")
+	if copilot_on then
+		command.disable()
+		print("Copilot OFF")
+		copilot_on = false
+	else
+		command.enable()
+		print("Copilot ON")
+		copilot_on = true
+	end
 end, { desc = "Toggle Copilot" })
+
+vim.keymap.set("n", "<C-h>", "<C-w>h", { desc = "Move to left window" })
+vim.keymap.set("n", "<C-l>", "<C-w>l", { desc = "Move to right window" })
+vim.keymap.set("n", "<C-j>", "<C-w>j", { desc = "Move to lower window" })
+vim.keymap.set("n", "<C-k>", "<C-w>k", { desc = "Move to upper window" })
