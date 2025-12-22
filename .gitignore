@@ -1,0 +1,6 @@
+# Neovim
+nvim/lazy-lock.json
+nvim/images/logo.png
+
+# env
+.env

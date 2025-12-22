@@ -1,0 +1,6 @@
+[commit]
+    template = ~/.gitcommit
+[init]
+    defaultBranch = main
+[core]
+	editor = nvim
