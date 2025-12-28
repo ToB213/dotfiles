@@ -7,7 +7,10 @@
 
 alias ls='ls --color=auto'
 alias grep='grep --color=auto'
+alias kssh='kitty +kitten ssh'
 PS1='[\u@\h \W]\$ '
+
+export TERM=xterm
 
 if [[ $(ps --no-header --pid=$PPID --format=comm) != "fish" && -z ${BASH_EXECUTION_STRING} ]]
 then
