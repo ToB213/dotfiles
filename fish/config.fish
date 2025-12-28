@@ -9,6 +9,7 @@ alias c='clear'
 alias top='btop'
 alias tasks='vim ~/tasks.md'
 alias vim='nvim'
+alias dots='cd ~/src/dotfiles'
 
 function waydroid-cleanup
     waydroid session stop
