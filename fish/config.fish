@@ -12,6 +12,8 @@ alias vim='nvim'
 alias dots='cd ~/src/dotfiles'
 alias kssh='kitty +kitten ssh'
 
+export PATH="$HOME/.local/bin:$PATH"
+
 function waydroid-cleanup
     waydroid session stop
     sudo systemctl stop waydroid-container.service
