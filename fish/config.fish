@@ -9,8 +9,8 @@ alias c='clear'
 alias top='btop'
 alias tasks='vim ~/tasks.md'
 alias vim='nvim'
-alias dots='cd ~/src/dotfiles'
 alias kssh='kitty +kitten ssh'
+alias cd="z"
 
 export PATH="$HOME/.local/bin:$PATH"
 
@@ -45,3 +45,5 @@ function load_env
 end
 
 load_env
+
+zoxide init fish | source
