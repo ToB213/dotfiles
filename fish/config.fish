@@ -19,6 +19,15 @@ function waydroid-cleanup
     sudo systemctl stop waydroid-container.service
 end
 
+function y
+	set tmp (mktemp -t "yazi-cwd.XXXXXX")
+	command yazi $argv --cwd-file="$tmp"
+	if read -z cwd < "$tmp"; and [ "$cwd" != "$PWD" ]; and test -d "$cwd"
+		builtin cd -- "$cwd"
+	end
+	rm -f -- "$tmp"
+end
+
 function kindle
     if not systemctl is-active --quiet waydroid-container.service
         sudo systemctl start waydroid-container.service
