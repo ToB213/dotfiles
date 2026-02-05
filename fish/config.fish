@@ -14,6 +14,11 @@ alias cd="z"
 
 export PATH="$HOME/.local/bin:$PATH"
 
+function marp
+  sudo docker run --rm --name marp -v $PWD:/home/marp/app/ -e LANG=$LANG -p 8080:8080 marpteam/marp-cli ./ --server
+  sudo docker container stop marp
+end
+
 function waydroid-cleanup
     waydroid session stop
     sudo systemctl stop waydroid-container.service
