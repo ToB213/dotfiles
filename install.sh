@@ -26,6 +26,9 @@ create_symlink "$DOTFILES_DIR/fish/config.fish" "$HOME/.config/fish/config.fish"
 if [ -d "$DOTFILES_DIR/fish/functions" ]; then
     create_symlink "$DOTFILES_DIR/fish/functions" "$HOME/.config/fish/functions"
 fi
+if [ -d "$DOTFILES_DIR/fish/conf.d" ]; then
+    create_symlink "$DOTFILES_DIR/fish/conf.d" "$HOME/.config/fish/conf.d"
+fi
 create_symlink "$DOTFILES_DIR/fastfetch" "$HOME/.config/fastfetch"
 create_symlink "$DOTFILES_DIR/kitty/kitty.conf" "$HOME/.config/kitty/kitty.conf"
 create_symlink "$DOTFILES_DIR/nvim" "$HOME/.config/nvim"
