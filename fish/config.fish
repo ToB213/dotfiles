@@ -1,5 +1,7 @@
 set -g fish_greeting
 
+eval (/opt/homebrew/bin/brew shellenv)
+
 if status is-interactive
     # Commands to run in interactive sessions can go here
     fastfetch
@@ -61,3 +63,17 @@ end
 load_env
 
 zoxide init fish | source
+
+# >>> conda initialize >>>
+# !! Contents within this block are managed by 'conda init' !!
+if test -f /Users/tob/miniconda3/bin/conda
+    eval /Users/tob/miniconda3/bin/conda "shell.fish" "hook" $argv | source
+else
+    if test -f "/Users/tob/miniconda3/etc/fish/conf.d/conda.fish"
+        . "/Users/tob/miniconda3/etc/fish/conf.d/conda.fish"
+    else
+        set -x PATH "/Users/tob/miniconda3/bin" $PATH
+    end
+end
+# <<< conda initialize <<<
+
