@@ -13,6 +13,7 @@ alias tasks='vim ~/tasks.md'
 alias vim='nvim'
 alias kssh='kitty +kitten ssh'
 alias cd="z"
+alias code="code -r"
 
 export PATH="$HOME/.local/bin:$PATH"
 
