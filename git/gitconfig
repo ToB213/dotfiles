@@ -5,8 +5,8 @@
 [core]
 	editor = nvim
 [user]
-    name = ${GIT_AUTHOR_NAME}
-    email = ${GIT_AUTHOR_EMAIL}
+	name = ToB213
+	email = niimicomputergraphics@gmail.com
 [filter "lfs"]
 	clean = git-lfs clean -- %f
 	smudge = git-lfs smudge -- %f

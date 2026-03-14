@@ -50,19 +50,6 @@ function kindle
     waydroid app launch com.amazon.kindle
 end
 
-function load_env
-    if test -f ~/.env
-        while read -l line
-            if not string match -qr '^#|^$' $line
-                set -l parts (string split = $line)
-                set -gx $parts[1] $parts[2]
-            end
-        end < ~/.env
-    end
-end
-
-load_env
-
 zoxide init fish | source
 
 # >>> conda initialize >>>
