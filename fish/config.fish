@@ -14,6 +14,7 @@ alias vim='nvim'
 alias kssh='kitty +kitten ssh'
 alias cd="z"
 alias code="code -r"
+alias rm='trash'
 
 export PATH="$HOME/.local/bin:$PATH"
 
