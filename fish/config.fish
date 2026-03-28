@@ -15,8 +15,7 @@ alias kssh='kitty +kitten ssh'
 alias cd="z"
 alias code="code -r"
 alias rm='trash'
-alias nixswitch='sudo darwin-rebuild switch --flake "path:/Users/tob/.config/nix-darwin?submodules=1#tob"'
-
+alias nixswitch='sudo darwin-rebuild switch --flake "git+file:///Users/tob/.config/nix-darwin?submodules=1#tob"'
 export PATH="$HOME/.local/bin:$PATH"
 
 function marp
