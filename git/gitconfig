@@ -1,3 +1,11 @@
+[pull]
+    rebase = true
+[push]
+    autoSetupRemote = true
+[diff]
+    colorMoved = zebra
+[merge]
+    conflictstyle = zdiff3
 [commit]
     template = ~/.gitcommit
 [init]

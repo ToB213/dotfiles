@@ -24,11 +24,6 @@ function marp
   sudo docker container stop marp
 end
 
-function waydroid-cleanup
-    waydroid session stop
-    sudo systemctl stop waydroid-container.service
-end
-
 function y
 	set tmp (mktemp -t "yazi-cwd.XXXXXX")
 	command yazi $argv --cwd-file="$tmp"
@@ -36,20 +31,6 @@ function y
 		builtin cd -- "$cwd"
 	end
 	rm -f -- "$tmp"
-end
-
-function kindle
-    if not systemctl is-active --quiet waydroid-container.service
-        sudo systemctl start waydroid-container.service
-        sleep 2
-    end
-
-    if not waydroid status &> /dev/null
-        waydroid session start &
-        sleep 3
-    end
-
-    waydroid app launch com.amazon.kindle
 end
 
 zoxide init fish | source
