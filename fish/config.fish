@@ -17,6 +17,8 @@ alias code="code -r"
 alias rm='trash'
 alias nixswitch='sudo darwin-rebuild switch --flake "git+file:///Users/tob/.config/nix-darwin?submodules=1#tob"'
 export PATH="$HOME/.local/bin:$PATH"
+fish_add_path ~/.cargo/bin
+mkcd-bin --init fish | source
 
 function marp
   sudo docker run --rm --name marp -v $PWD:/home/marp/app/ -e LANG=$LANG -p 8080:8080 marpteam/marp-cli ./ --server
