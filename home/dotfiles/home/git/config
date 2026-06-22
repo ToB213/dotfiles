@@ -1,0 +1,22 @@
+[pull]
+    rebase = true
+[push]
+    autoSetupRemote = true
+[diff]
+    colorMoved = zebra
+[merge]
+    conflictstyle = zdiff3
+[commit]
+    template = ~/.gitcommit
+[init]
+    defaultBranch = main
+[core]
+	editor = nvim
+[user]
+	name = ToB213
+	email = niimicomputergraphics@gmail.com
+[filter "lfs"]
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+	required = true
