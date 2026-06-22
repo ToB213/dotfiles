@@ -59,5 +59,6 @@
     obsidian
     raycast
     zed-editor
+    chatgpt
   ];
 }
