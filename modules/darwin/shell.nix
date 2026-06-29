@@ -1,7 +1,11 @@
 { pkgs, ... }:
 {
-  programs.direnv.enable = true;
-  programs.fish.enable = true;
-
+  programs = {
+    direnv = {
+      enable = true;
+      nix-direnv.enable = true;
+    };
+    fish.enable = true;
+  };
   users.users.tob.shell = pkgs.fish;
 }
