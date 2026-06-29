@@ -58,7 +58,5 @@
     imagemagick
     obsidian
     raycast
-    zed-editor
-    chatgpt
   ];
 }

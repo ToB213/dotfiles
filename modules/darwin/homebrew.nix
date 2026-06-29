@@ -16,6 +16,7 @@
       "spotify"
       "tad"
       "visual-studio-code"
+      "zed"
     ];
   };
 }
