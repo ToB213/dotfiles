@@ -17,6 +17,7 @@
       "tad"
       "visual-studio-code"
       "zed"
+      "super-productivity"
     ];
   };
 }
