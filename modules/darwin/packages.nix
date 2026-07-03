@@ -45,9 +45,11 @@
     awscli2
     cloudflared
     helmfile
+    k9s
     kubernetes-helm
     kubeseal
     qemu
+    kind
     terraform
 
     # Desktop apps and media
