@@ -1,14 +1,13 @@
-# Commit body...
-# 🎉 initial commit
-# ✨ introduce new feature
-# 🐛 fix a bug
-# ✅ add, update, or pass a test
-# ♻️ refactor code
-# 🙈 add or update ignore files
-# 🎨 improve structure / format of the code
-# 🚚 move or rename resources
-# 📝 add or update documentation
-# 🚧 work in progress
-# 🔖 version tag
-# ⚡️ improve performance
-# 🔥 remove code or files
+# 🎉 最初のコミット
+# ✨ 新しい機能を導入
+# 🐛 バグを修正
+# ✅ テストを追加、更新、またはパス
+# ♻️ コードをリファクタリング
+# 🙈 .gitignoreを追加または更新
+# 🎨 コードの構造/フォーマットを改善
+# 🚚 リソースを移動または名前を変更
+# 📝 ドキュメントを追加または更新
+# 🚧 進行中
+# 🔖 バージョンタグ
+# ⚡️ パフォーマンスを改善
+# 🔥 不要なコードやファイルを削除
