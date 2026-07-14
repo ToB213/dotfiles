@@ -16,13 +16,14 @@ let
     "fish_right_prompt.fish"
     "fish_title.fish"
   ];
+  bass = pkgs.fishPlugins.bass;
 in
 {
   home.file = {
     ".config/fish/config.fish".source = outOfStoreSymlink "${dotfilesRoot}/config/fish/config.fish";
     ".config/fish/conf.d".source = outOfStoreSymlink "${dotfilesRoot}/config/fish/conf.d";
-    ".config/fish/functions/y.fish".source =
-      outOfStoreSymlink "${dotfilesRoot}/config/fish/functions/y.fish";
+    ".config/fish/functions/y.fish".source = outOfStoreSymlink "${dotfilesRoot}/config/fish/functions/y.fish";
+    ".config/fish/functions/bass.fish".source = "${bass}/share/fish/vendor_functions.d/bass.fish";
   }
   // builtins.listToAttrs (
     map (name: {
