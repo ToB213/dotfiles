@@ -18,6 +18,7 @@
       "visual-studio-code"
       "zed"
       "super-productivity"
+      "softmaker-freeoffice"
     ];
   };
 }
