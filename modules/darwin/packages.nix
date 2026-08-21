@@ -20,25 +20,10 @@
     zoxide
 
     # Development
-    cargo
-    clippy
-    go
     go-task
-    jdk21
-    libiconv
     neovim
     nix-direnv
-    nodejs
-    openldap
-    openssl
-    perl
-    pkg-config
-    python314
-    ruff
-    rust-analyzer
-    rustc
-    rustfmt
-    uv
+    shellcheck
 
     # Infrastructure
     ansible
@@ -56,7 +41,6 @@
     dbeaver-bin
     fish
     ghostty-bin
-    hugo
     imagemagick
     obsidian
     raycast
