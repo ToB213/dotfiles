@@ -32,7 +32,7 @@ nix run nix-darwin -- switch --flake .#tob
 Open PowerShell and run:
 
 ```powershell
-Set-ExecutionPolicy -Scope Process Bypass
+Set-ExecutionPolicy -Scope Process -ExecutionPolicy Bypass
 .\windows\setup.ps1
 ```
 
