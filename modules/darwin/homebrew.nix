@@ -20,7 +20,6 @@
       "super-productivity"
       "softmaker-freeoffice"
       "firefox"
-      "firefoxpwa"
     ];
   };
 }
