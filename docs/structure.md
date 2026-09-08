@@ -13,6 +13,10 @@ This repository keeps the flake entrypoint small and moves behavior into modules
 
 Add another machine by creating a sibling directory under `hosts` and registering it in `flake.nix`.
 
+`hosts/tob-wsl` is the Windows-side Linux host. It uses standalone Home Manager
+because nix-darwin only supports macOS. Windows-native applications are kept in
+`windows/setup.ps1` and installed with winget.
+
 ## Darwin Modules
 
 `modules/darwin` contains system-level configuration:
@@ -31,6 +35,7 @@ Add another machine by creating a sibling directory under `hosts` and registerin
 - `git.nix`: Git dotfiles
 - `cli.nix`: miscellaneous CLI dotfiles
 - `dotfiles.nix`: shared dotfile root and symlink helper
+- `packages.nix`: CLI packages installed by standalone Home Manager on WSL
 
 Keep dotfile contents under `home/dotfiles`; modules should only describe where those files are linked.
 Inside `home/dotfiles`, use `config/` for files linked into `$HOME/.config`, `home/` for files linked directly into `$HOME`, and `shared/` for supporting files such as licenses.
