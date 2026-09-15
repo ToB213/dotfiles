@@ -1,6 +1,7 @@
 {
   homebrew = {
     enable = true;
+    onActivation.cleanup = "uninstall";
 
     casks = [
       "battery"
