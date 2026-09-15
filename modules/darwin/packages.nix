@@ -1,48 +1,14 @@
 { pkgs, ... }:
 {
   environment.systemPackages = with pkgs; [
-    # Core CLI
-    btop
-    fd
-    fastfetch
-    gh
-    git
-    git-lfs
-    jq
-    p7zip
-    ripgrep
-    tmux
-    trash-cli
-    tree
-    vim
-    wget
-    yazi
-    zoxide
-
-    # Development
-    go-task
-    neovim
-    nix-direnv
-    shellcheck
-
-    # Infrastructure
-    ansible
-    awscli2
-    cloudflared
-    helmfile
-    k9s
-    kubernetes-helm
-    kubeseal
-    qemu
-    kind
-    terraform
-
-    # Desktop apps and media
-    dbeaver-bin
+    # Required by nix-darwin as the user's login shell.
     fish
+
+    # Darwin-specific applications and tooling.
+    dbeaver-bin
     ghostty-bin
-    imagemagick
     obsidian
+    qemu
     raycast
   ];
 }

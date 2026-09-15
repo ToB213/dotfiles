@@ -1,5 +1,6 @@
 {
   imports = [
+    ../modules/home/packages.nix
     ../modules/home/dotfiles.nix
     ../modules/home/cli.nix
     ../modules/home/fish.nix

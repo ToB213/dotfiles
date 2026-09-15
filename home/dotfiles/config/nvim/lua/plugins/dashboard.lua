@@ -104,7 +104,6 @@ return {
             button("e", "New file", "<cmd>ene <CR>"),
             button("SPC f f", "Find file"),
             button("SPC f g", "Find word"),
-            button("SPC s l", "Open last session"),
           },
           opts = {
             spacing = 1,

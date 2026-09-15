@@ -25,13 +25,8 @@ return {
         end,
       })
 
-      vim.lsp.config('lua_ls', {
+      vim.lsp.config("lua_ls", {
         capabilities = capabilities,
-        cmd = { 'lua-language-server' },
-        filetypes = { 'lua' },
-        root_dir = vim.fs.root(0,
-          { '.luarc.json', '.luarc.jsonc', '.luacheckrc', '.stylua.toml', 'stylua.toml', 'selene.toml', 'selene.yml',
-            '.git' }),
         settings = {
           Lua = {
             diagnostics = { globals = { "vim" } },
@@ -40,11 +35,8 @@ return {
         },
       })
 
-      vim.lsp.config('bashls', {
+      vim.lsp.config("bashls", {
         capabilities = capabilities,
-        cmd = { 'bash-language-server', 'start' },
-        filetypes = { 'sh', 'bash' },
-        root_dir = vim.fs.root(0, { '.git' }),
       })
 
       require("conform").setup({

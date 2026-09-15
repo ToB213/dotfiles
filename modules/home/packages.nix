@@ -1,4 +1,4 @@
-{ pkgs, ... }:
+{ lib, pkgs, ... }:
 {
   home.packages = with pkgs; [
     ansible
@@ -8,16 +8,17 @@
     fd
     fastfetch
     gh
-    fish
     git
     git-lfs
     go-task
     helmfile
+    imagemagick
     jq
     k9s
     kind
     kubernetes-helm
     kubeseal
+    lazygit
     neovim
     nix-direnv
     p7zip
@@ -27,9 +28,14 @@
     tmux
     trash-cli
     tree
+    vim
     wget
     yazi
     zoxide
+  ]
+  ++ lib.optionals pkgs.stdenv.isLinux [
+    # On Darwin, fish is installed system-wide because it is the login shell.
+    pkgs.fish
   ];
 
   programs = {

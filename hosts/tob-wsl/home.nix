@@ -1,7 +1,6 @@
 {
   imports = [
     ../../home
-    ../../modules/home/packages.nix
   ];
 
   home.username = "tob";
