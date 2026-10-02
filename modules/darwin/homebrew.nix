@@ -4,6 +4,7 @@
     onActivation.cleanup = "uninstall";
 
     casks = [
+      "balenaetcher"
       "battery"
       "bitwarden"
       "discord"
