@@ -39,6 +39,20 @@ return {
         capabilities = capabilities,
       })
 
+      vim.lsp.config("clangd", {
+        capabilities = capabilities,
+        cmd = {
+          "clangd",
+          "--background-index",
+          "--clang-tidy",
+          "--completion-style=detailed",
+          "--header-insertion=iwyu",
+          "--query-driver=/nix/store/*/bin/clang++",
+        },
+      })
+
+      vim.lsp.enable({ "lua_ls", "bashls", "clangd" })
+
       require("conform").setup({
         format_on_save = {
           timeout_ms = 500,
