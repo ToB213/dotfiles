@@ -26,6 +26,7 @@
       neovim
       ninja
       nix-direnv
+      nodejs
       p7zip
       pkg-config
       ripgrep
