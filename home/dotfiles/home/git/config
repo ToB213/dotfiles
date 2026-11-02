@@ -14,7 +14,7 @@
 	editor = nvim
 [user]
 	name = ToB213
-	email = niimicomputergraphics@gmail.com
+	email = tob213.dev@gmail.com
 [filter "lfs"]
 	clean = git-lfs clean -- %f
 	smudge = git-lfs smudge -- %f
