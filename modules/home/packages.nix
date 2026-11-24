@@ -16,7 +16,6 @@
       git-lfs
       go-task
       helmfile
-      helix
       imagemagick
       jq
       k9s
@@ -39,6 +38,7 @@
       vim
       wget
       yazi
+      zig
       zoxide
     ]
     ++ lib.optionals pkgs.stdenv.isLinux [

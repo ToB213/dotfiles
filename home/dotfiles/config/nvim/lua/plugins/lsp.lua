@@ -2,18 +2,13 @@ return {
   {
     "neovim/nvim-lspconfig",
     dependencies = {
-      "williamboman/mason.nvim",
-      "williamboman/mason-lspconfig.nvim",
       "hrsh7th/cmp-nvim-lsp",
       "stevearc/conform.nvim",
     },
     config = function()
-      require("mason").setup()
-      require("mason-lspconfig").setup({
-        ensure_installed = { "bashls", "lua_ls" },
-      })
       local capabilities = require("cmp_nvim_lsp").default_capabilities()
-      _G.lsp_capabilities = capabilities
+      -- Servers are installed by Nix and discovered on PATH.
+      vim.lsp.config("*", { capabilities = capabilities })
 
       vim.api.nvim_create_autocmd("LspAttach", {
         group = vim.api.nvim_create_augroup("UserLspConfig", {}),
@@ -22,6 +17,12 @@ return {
           vim.keymap.set("n", "gd", vim.lsp.buf.definition, opts)
           vim.keymap.set("n", "K", vim.lsp.buf.hover, opts)
           vim.keymap.set("n", "gr", vim.lsp.buf.references, opts)
+          vim.keymap.set("n", "<leader>rn", vim.lsp.buf.rename, opts)
+          vim.keymap.set({ "n", "x" }, "<leader>ca", vim.lsp.buf.code_action, opts)
+          local client = vim.lsp.get_client_by_id(ev.data.client_id)
+          if client and client.name == "ruff" then
+            client.server_capabilities.hoverProvider = false
+          end
         end,
       })
 
@@ -35,8 +36,11 @@ return {
         },
       })
 
-      vim.lsp.config("bashls", {
+      vim.lsp.config("pyright", {
         capabilities = capabilities,
+        settings = {
+          python = { analysis = { typeCheckingMode = "standard" } },
+        },
       })
 
       vim.lsp.config("clangd", {
@@ -51,12 +55,17 @@ return {
         },
       })
 
-      vim.lsp.enable({ "lua_ls", "bashls", "clangd" })
+      vim.lsp.enable({ "lua_ls", "bashls", "clangd", "nil_ls", "pyright", "ruff", "rust_analyzer", "zls" })
 
       require("conform").setup({
+        formatters_by_ft = {
+          nix = { "nixfmt" },
+          python = { "ruff_format" },
+          zig = { "zigfmt" },
+        },
         format_on_save = {
-          timeout_ms = 500,
-          lsp_fallback = true,
+          timeout_ms = 1000,
+          lsp_format = "fallback",
         },
       })
     end,
