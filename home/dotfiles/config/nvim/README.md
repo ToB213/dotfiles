@@ -24,8 +24,6 @@ Project toolchains and dependencies still belong in each project's devShell.
 
 - `<Space>ff`: find files; `<Space>fg`: search text.
 - `gd`: definition; `gr`: references; `K`: hover.
-- In normal mode, rest the mouse over a symbol for 500 ms to show LSP information.
-  The terminal must support mouse movement events.
 - `<Space>rn`: rename; `<Space>ca`: code actions.
 - `<Ctrl-Space>`: completion; `<Tab>`: next candidate or snippet.
 - `:checkhealth vim.lsp` and `:ConformInfo`: inspect language support.
