@@ -16,6 +16,7 @@
       git-lfs
       go-task
       helmfile
+      helix
       imagemagick
       jq
       k9s
