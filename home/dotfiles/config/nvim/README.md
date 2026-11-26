@@ -27,3 +27,17 @@ Project toolchains and dependencies still belong in each project's devShell.
 - `<Space>rn`: rename; `<Space>ca`: code actions.
 - `<Ctrl-Space>`: completion; `<Tab>`: next candidate or snippet.
 - `:checkhealth vim.lsp` and `:ConformInfo`: inspect language support.
+
+## GitHub Copilot
+
+`github/copilot.vim` provides inline suggestions using Node.js from the shared
+Nix packages. Restart Neovim to let lazy.nvim install the plugin, then run
+`:Copilot setup` and complete GitHub authentication in your browser. Your GitHub
+account needs Copilot access (the Free plan also works).
+
+- `<Ctrl-J>` in insert mode: accept the suggestion, or insert a newline if none.
+- `<Ctrl-]>`: dismiss the suggestion.
+- `:Copilot status`: check authentication and availability.
+- `:Copilot disable` / `:Copilot enable`: toggle suggestions.
+
+Tab remains assigned to nvim-cmp and snippets.
