@@ -7,6 +7,7 @@
     # Darwin-specific applications and tooling.
     dbeaver-bin
     ghostty-bin
+    lima
     obsidian
     qemu
     raycast
